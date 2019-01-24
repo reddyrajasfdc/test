@@ -1,0 +1,15 @@
+({
+                saveModal : function(component, event, helper) {
+                                component.set("v.showScreen","2")
+        component.find("AppID").set("v.label",'Submit');
+                },
+    
+    cancelModal : function(component, event, helper){
+        
+        var cmpTarget = component.find('modalbox');
+        var cmpBack = component.find('modalbackdrop');
+        $A.util.removeClass(cmpTarget, 'slds-fade-in-open');
+        $A.util.removeClass(cmpBack, 'slds-backdrop--open');
+    },
+    
+})
